@@ -7,7 +7,7 @@ export const followUser = async (req: Request, res: Response) => {
     const currentUserId = req.user.id;
 
     if (userId === currentUserId) {
-      return res.status(400).json({ error: "You cannot follow yourself" });
+      return res.status(400).json({ error: "You cannot follow  yourself" });
     }
 
     const userToFollow = await User.findByPk(userId);
